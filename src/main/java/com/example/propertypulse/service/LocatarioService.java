@@ -28,5 +28,14 @@ public class LocatarioService {
     public Optional<Locatario> buscarLocatarioPorId(Long id) {
         return locatarioRepository.findById(id);
     }
+
+    public void excluirLocatario(Long id) {
+        locatarioRepository.deleteById(id);
+    }
+
+    public Locatario buscarPorId(Long id) {
+        return locatarioRepository.findById(id).orElse(null); // Retorna null se não encontrar
+    }
+
 }
 
