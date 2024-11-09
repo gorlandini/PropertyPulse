@@ -17,7 +17,7 @@ public class LocatarioController {
 
     @GetMapping("/hello")
     public String hello(){
-        return "hello2333";
+        return "hello2333d";
     }
 
     // Endpoint para salvar um novo locatário
