@@ -11,7 +11,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 public class PropertyPulseApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(PropertyPulseApplication.class, args);
+
 	}
 
 }

@@ -23,7 +23,7 @@ public class Imovel {
     @ManyToOne
     private Proprietario proprietario;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private Endereco endereco;
 
     private BigDecimal valorTotal;
