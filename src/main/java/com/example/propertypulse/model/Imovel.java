@@ -28,5 +28,6 @@ public class Imovel {
 
     private BigDecimal valorTotal;
     private Short disponibilidadeTempo;
+    private Boolean status;
 
 }
