@@ -29,7 +29,7 @@ public class Contrato {
     private Locatario locatario;
 
     private LocalDate dataInicio;
-    private LocalDate dataTermino;
+    private LocalDate dataFim;
     private BigDecimal valorMensal;
     private BigDecimal multa;
     private Boolean status;
