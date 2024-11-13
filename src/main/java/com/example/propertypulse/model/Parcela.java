@@ -6,29 +6,27 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Imovel {
+public class Parcela {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String titulo;
-    private String descricao;
+    private BigDecimal valorParcela;
+    private LocalDate dataInicio;
+    private LocalDate dataVencimento;
+    private Boolean ativa;
 
     @ManyToOne
-    private Proprietario proprietario;
+    private Contrato contrato;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
-    private Endereco endereco;
 
-    private BigDecimal valorTotal;
-    private Short disponibilidadeTempo;
-    private Boolean status;
 
 
 

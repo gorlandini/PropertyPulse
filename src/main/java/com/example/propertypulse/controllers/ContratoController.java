@@ -18,6 +18,8 @@ public class ContratoController {
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public Contrato salvarContrato(@RequestBody Contrato contrato) {
+        System.out.println(contrato.getDataFim());
+
         return contratoService.salvarContrato(contrato);
     }
 

@@ -15,6 +15,7 @@ public class ContratoService {
     private ContratoRepository contratoRepository;
 
     public Contrato salvarContrato(Contrato contrato) {
+        System.out.println("Valor mensal:" + contrato.getValorMensal());
         return contratoRepository.save(contrato);
     }
 

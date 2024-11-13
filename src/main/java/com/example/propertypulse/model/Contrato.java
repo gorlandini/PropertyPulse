@@ -32,6 +32,14 @@ public class Contrato {
     private LocalDate dataFim;
     private BigDecimal valorMensal;
     private BigDecimal multa;
-    private Boolean status;
+    private boolean status;
+
+
+
+
+
+
+
+
 
 }
