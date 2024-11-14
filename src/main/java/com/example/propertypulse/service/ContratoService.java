@@ -65,6 +65,10 @@ public class ContratoService {
 
     }
 
+    public List<Contrato> buscarContratosPorNomeLocatario(String nomeLocatario) {
+        return contratoRepository.findByLocatarioNome(nomeLocatario);
+    }
+
     public List<Contrato> listarContratos() {
         return contratoRepository.findAll();
     }
