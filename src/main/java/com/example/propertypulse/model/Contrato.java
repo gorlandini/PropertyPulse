@@ -1,5 +1,6 @@
 package com.example.propertypulse.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,6 +33,7 @@ public class Contrato {
     private boolean status;
 
     @OneToMany(mappedBy = "contrato")
+    @JsonManagedReference
     private List<Parcela> parcelas;
 
 

@@ -1,5 +1,7 @@
 package com.example.propertypulse.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,6 +26,8 @@ public class Parcela {
     private Boolean ativa;
 
     @ManyToOne
+    @JoinColumn(name = "contrato_id")
+    @JsonBackReference
     private Contrato contrato;
 
 
