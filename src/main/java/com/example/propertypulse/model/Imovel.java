@@ -1,6 +1,12 @@
 package com.example.propertypulse.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,13 +29,11 @@ public class Imovel {
     @ManyToOne
     private Proprietario proprietario;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = CascadeType.ALL)
     private Endereco endereco;
 
     private BigDecimal valorTotal;
     private Short disponibilidadeTempo;
     private Boolean status;
-
-
 
 }
